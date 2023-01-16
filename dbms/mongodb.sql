@@ -37,8 +37,8 @@ EMPLOYEE> db.salarycollections.find();
 [
   {
     _id: ObjectId("638eee4efc4d6be32bb4ccff"),
-    id: '103',
-    name: 'Sona',
+    id: '104',
+    name: 'Dev',
     Age: 30
   },
   {

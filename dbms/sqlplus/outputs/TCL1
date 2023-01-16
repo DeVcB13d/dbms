@@ -1,0 +1,69 @@
+
+SQL> @TCL2.sql
+Old Salary:
+New Salary: 10
+Salary difference:
+
+1 row created.
+
+
+Commit complete.
+
+Old Salary: 2
+New Salary: 22
+Salary difference: 20
+
+1 row updated.
+
+
+Savepoint created.
+
+Old Salary:
+New Salary: 29
+Salary difference:
+
+1 row created.
+
+
+Savepoint created.
+
+Old Salary:
+New Salary: 5
+Salary difference:
+
+1 row created.
+
+
+Savepoint created.
+
+
+       SSN        PNO      HOURS
+---------- ---------- ----------
+       112        221         22
+       113        221          2
+       114        222          4
+       104        122         11
+       117         23         10
+       127         23         10
+       145         23         29
+       127         22         10
+      1245         23         29
+      1227         14          5
+
+10 rows selected.
+
+
+Rollback complete.
+
+
+       SSN        PNO      HOURS
+---------- ---------- ----------
+       112        221         22
+       113        221          2
+       114        222          4
+       104        122         11
+       117         23         10
+       127         23         10
+       145         23         29
+       127         22         10
+      1245         23         29

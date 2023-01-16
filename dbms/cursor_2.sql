@@ -1,14 +1,18 @@
-DECLARE cursor cust_cursor is 
-select id,salary from customer where id = 102;
-for ;
+-- Write a PL/SQL cursor program to retrieve Dno and DName from
+-- Department table as per the schema
+DECLARE cursor dep_cursor is 
+select DNO,DNAME from Department where DNO = 100;
+
 BEGIN
-for cust_rec in cust_cursor LOOP
-if cust_rec.salary < 2000 then
-incr_sal := 0.15;
-else 
-incr_sal := 0.10;
-end if;
-update customer set salary = salary + salary*incr_sal where current of cust_cursor;
+for i in dep_cursor LOOP
+    dbms_output.put_line(i.DNO,i.DNAME);
 end loop;
 end;
+/
 
+DNO     DNAME
+--------------------------------
+100     DCS
+110     SDS
+121     SLS
+122     WCS
